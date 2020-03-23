@@ -51,7 +51,10 @@ public class Main {
 
         ejercicio1();
         
-        public static  void ejercicio1 () {
+
+    }
+
+    public static  void ejercicio1 () {
         /*1. Modele el objeto Rectángulo con sus propiedades, ancho y alto. Ambas con valor
             1,0 por defecto. Este objeto debe exponer los getters y setters necesarios. También
             debe contar con un método para calcular el área y perímetro del mismo. Ejecute las
@@ -63,48 +66,48 @@ public class Main {
                     e. Imprimir por pantalla nuevamente el cálculo del área y perímetro.
                     f. Inicializar un objeto Rectángulo con los valores por defecto y verificar.*/
 
-            double area, perimetro;
+        double area, perimetro;
 
-            /*1.A*/
-            Rectangulo rectangulito = new Rectangulo(1.0, 1.0);
+        /*1.A*/
+        Rectangulo rectangulito = new Rectangulo(1.0, 1.0);
 
-            /*1.B*/
-            rectangulito.mostrarDimensiones(rectangulito.alto, rectangulito.ancho);
+        /*1.B*/
+        rectangulito.mostrarDimensiones(rectangulito.alto, rectangulito.ancho);
 
-            /*1.C*/
-            area = rectangulito.area(rectangulito.alto, rectangulito.ancho);
-            perimetro = rectangulito.perimetro(rectangulito.alto, rectangulito.ancho);
+        /*1.C*/
+        area = rectangulito.area(rectangulito.alto, rectangulito.ancho);
+        perimetro = rectangulito.perimetro(rectangulito.alto, rectangulito.ancho);
 
-            rectangulito.muestraAyP(area, perimetro);
+        rectangulito.muestraAyP(area, perimetro);
 
-            /*1.D*/
-            Scanner aux;
-            double alto, ancho;
+        /*1.D*/
+        Scanner aux;
+        double alto, ancho;
 
-            System.out.println("\nIngrese el alto del rectangulo:\t");
-            aux = new Scanner(System.in);
-            alto = aux.nextDouble();
-            System.out.println("\nIngrese el ancho del rectangulo:\t");
-            aux = new Scanner(System.in);
-            ancho = aux.nextDouble();
+        System.out.println("\nIngrese el alto del rectangulo:\t");
+        aux = new Scanner(System.in);
+        alto = aux.nextDouble();
+        System.out.println("\nIngrese el ancho del rectangulo:\t");
+        aux = new Scanner(System.in);
+        ancho = aux.nextDouble();
 
-            rectangulito.setAlto(alto);
-            rectangulito.setAncho(ancho);
-            rectangulito.mostrarDimensiones(rectangulito.alto, rectangulito.ancho);
+        rectangulito.setAlto(alto);
+        rectangulito.setAncho(ancho);
+        rectangulito.mostrarDimensiones(rectangulito.alto, rectangulito.ancho);
 
-            /*1.E*/
+        /*1.E*/
 
-            area = rectangulito.area(rectangulito.alto, rectangulito.ancho);
-            perimetro = rectangulito.perimetro(rectangulito.alto, rectangulito.ancho);
+        area = rectangulito.area(rectangulito.alto, rectangulito.ancho);
+        perimetro = rectangulito.perimetro(rectangulito.alto, rectangulito.ancho);
 
-            rectangulito.muestraAyP(area, perimetro);
+        rectangulito.muestraAyP(area, perimetro);
 
-            /*1.F*/
-            rectangulito = new Rectangulo(1.0, 1.0);
-            rectangulito.mostrarDimensiones(rectangulito.alto, rectangulito.ancho);
-        }
-
+        /*1.F*/
+        rectangulito = new Rectangulo(1.0, 1.0);
+        rectangulito.mostrarDimensiones(rectangulito.alto, rectangulito.ancho);
     }
+
 }
+
 
 
