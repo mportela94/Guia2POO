@@ -11,9 +11,12 @@ public class Main {
         ejercicio2();
 
         ejercicio3();
-        */
+
         ejercicio4();
+        */
+        ejercicio5();
     }
+
 
 
     public static void ejercicio1 () {
@@ -31,7 +34,7 @@ public class Main {
         double area, perimetro;
 
         /*1.A*/
-        Rectangulo rectangulito = new Rectangulo(1.0, 1.0);
+        Rectangulo rectangulito = new Rectangulo(1.0,1.0);
 
         /*1.B*/
         rectangulito.mostrarDimensiones();
@@ -159,7 +162,18 @@ public class Main {
                 3. Un método que retroceda en 1 segundo y devuelva la instancia del objeto.
                 4. Instanciar el objeto y probar los métodos creados.*/
 
-        
+        int hora, minutos, segundos;
+        Hora horaLocal=new Hora(0,0,0);
+
+        horaLocal.cargarHora();
+        horaLocal.mostrarHora();
+
+        horaLocal.sumarSegundo();
+        horaLocal.mostrarHora();
+
+        horaLocal.restarSegundo();
+        horaLocal.mostrarHora();
+
     }
 }
 
