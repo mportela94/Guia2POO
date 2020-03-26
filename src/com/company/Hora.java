@@ -55,6 +55,7 @@ public class Hora {
         Scanner scanner=new Scanner(System.in);
         int hora=24,minutos=100,segundos=100;
 
+
         while (hora<0 || hora >23){
             System.out.println("Ingrese un numero entre 0 y 23 para la Hora: ");
             hora=scanner.nextInt();
@@ -89,8 +90,44 @@ public class Hora {
             fmtSegundos.format("%02d",segundos);
         }
 
-        System.out.println(fmtHora + ":" + fmtMinuto + ":" + fmtSegundos);
+        System.out.println("\n" + fmtHora + ":" + fmtMinuto + ":" + fmtSegundos);
+
     }
+
+    public void sumarSegundo (){
+
+        segundos=(segundos+1);
+
+        if (segundos==60){
+            segundos=0;
+            minutos=minutos+1;
+            if (minutos==60){
+                minutos=0;
+                hora=hora+1;
+                if (hora==24){
+                    hora=0;
+                }
+            }
+        }
+    }
+
+    public void restarSegundo (){
+
+        segundos=(segundos-1);
+
+        if (segundos<0){
+            segundos=59;
+            minutos=minutos-1;
+            if (minutos<59){
+                minutos=59;
+                hora=hora-1;
+                if (hora<0){
+                    hora=23;
+                }
+            }
+        }
+    }
+
 
 
 }
